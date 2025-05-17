@@ -10,20 +10,20 @@ int main() {
 
 
         printf("MOVIMENTAÇAO DE PEÇAS XADREZ\n");
-        printf("\n O tabuleiro possui 3 peças, escolha uma para mover!\n");
+        printf("\nO tabuleiro possui 3 peças, escolha uma para mover!\n");
 
         printf("\n1.Torre\n");
         printf("2.Bispo\n");
         printf("3.Rainha\n");
         printf("Escolha uma opção: ");
-        scanf("%d", opcao);
+        scanf("%d", &opcao);
 
             switch (opcao)
             {
             case 1:
-                printf("Você selecionou a Torre. Quantas casas você quer movê-la?\n");
+                printf("\nVocê selecionou a Torre. Quantas casas você quer movê-la?\n");
                 printf("Escolha um número de 1 a 5: ");
-                scanf("%d", numTorre);
+                scanf("%d", &numTorre);
 
                 break;
             
