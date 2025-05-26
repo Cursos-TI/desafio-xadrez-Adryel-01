@@ -69,6 +69,8 @@ int main() {
 
                     printf("\nQual a direção que você quer movê-la?\n");
 
+// Utilizei o do while mais uma vez para não encerrar o programa se o usuário digitar outras opções.
+
                     do
                     {
                         printf("\nEscolha 'd' se for para direita;\n");
@@ -114,6 +116,9 @@ int main() {
             }
             break;
 
+// Código se escolher o bispo. 
+//Obs.: Para toda a entrada do usuário, foi colocado um do while, afim de manter o jogo intuitivo.
+
             case 2:
 
                     printf("\nVocê selecionou o Bispo. Quantas casas você quer movê-lo?\n");
@@ -152,6 +157,8 @@ int main() {
                         
                 } while (direcaoBispo < 1 || direcaoBispo > 4);
 
+//Para o bispo, eu escolhi o do while para a funcionalidade do desafio.
+
                 do
                 {
                     if (direcaoBispo == 1)
@@ -173,6 +180,8 @@ int main() {
                 
             
             break;
+
+//Código para a opção "Rainha".
 
             case 3:
 
@@ -214,11 +223,13 @@ int main() {
 
                 } while (direcaoRainha < 1 || direcaoRainha > 8);
                 
-                for (i = 0; i < numRainha; i++)
+// Escolhi o for para essa ocasião
+
+                for (i ; i < numRainha; i++)
                 {
                     if (direcaoRainha == 1)
                     {
-                        printf("\nDireita\n");
+                        printf("Direita\n");
 
                     } else if (direcaoRainha == 2)
                     {
