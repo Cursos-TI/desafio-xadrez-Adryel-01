@@ -10,7 +10,7 @@ int main() {
 
         int opcao, numTorre, numBispo, numRainha, i = 0, voltarAoMenu;
         char direcaoTorre;
-        int direcaoBispo, direcaoRainha;
+        int direcaoBispo, direcaoRainha, direcaoCavalo;
 
             printf("MOVIMENTAÇAO DE PEÇAS XADREZ\n");
 
@@ -19,11 +19,12 @@ int main() {
         do
         {
             
-            printf("\n\nO tabuleiro possui 3 peças, escolha uma para mover!\n");
+            printf("\n\nO tabuleiro possui 4 peças, escolha uma para mover!\n");
 
             printf("\n1.Torre\n");
             printf("2.Bispo\n");
             printf("3.Rainha\n");
+            printf("4.Cavalo\n");
             printf("0.Sair\n");
             printf("Escolha uma opção: ");
             scanf("%d", &opcao);
@@ -37,7 +38,7 @@ int main() {
 
 // Esse if é para fazer com que se repita o código acima, se o usuário digitar qualquer outra opção.
 
-            } else if (opcao < 1 || opcao > 3){
+            } else if (opcao < 1 || opcao > 4){
 
                 printf("\nOpção Inválida, tente novamente!\n");
             continue;
@@ -264,6 +265,60 @@ int main() {
                 
 
             break;
+
+            case 4:
+            {
+
+                printf("\nVocê selecionou o Cavalo! Qual a direção que você quer movê-lo?\n");
+
+                do
+                {
+                    printf("\nEscolha 1 se for para direita e cima;\n");
+                    printf("Escolha 2 se for para esquerda cima;\n");
+                    printf("Escolha 3 se for para direita baixo;\n");
+                    printf("Escolha 4 se for para esquerda baixo;\n");
+                    printf("Escolha 5 se for para baixo e direita;\n");
+                    printf("Escolha 6 se for para baixo e esquerda;\n");
+                    printf("Escolha 7 se for para cima e direita;\n");
+                    printf("Escolha 8 se for para cima e esquerda;\n");
+                    printf("\nEscolha a direção: ");
+                    scanf(" %d", &direcaoCavalo);
+
+                        if (direcaoCavalo < 1 || direcaoCavalo > 8)
+                        {
+                            printf("Direção Inválida. Tente novamente!\n");
+                            continue;
+                        }
+                            printf("\n");
+
+                        switch (direcaoCavalo)
+                        {
+                        case 1: // direita e cima
+                            
+                            for(i ; i < 2 ; i++)
+                            {
+                                printf("Direita\n");
+                            }
+                                printf("Cima");
+                            
+                            break;
+                        
+                        default:
+                            break;
+                        }
+
+                    
+    
+                        
+                } while (direcaoCavalo < 1 || direcaoCavalo > 8);
+                
+
+
+
+            }
+            break;
+
+
             }
 
             } while (1);
